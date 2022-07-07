@@ -73,7 +73,7 @@ else
 		<link rel="icon" sizes="16x16" href="favicon.png"/>
 	</head>
 	<body>
-		<form method="POST" action="OpenDoorEntree.php">
+		<form method="POST" action="simple-page-access-door.php">
 			<h2>Ouverture de portes</h2>
 			<input type="submit" name="Access_Entree_01" class="button" value="Access_Entree_01"/>
 			<input type="submit" name="Unlock_Entree_01" class="button" value="Unlock_Entree_01"/>
