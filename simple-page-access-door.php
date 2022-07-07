@@ -70,9 +70,9 @@ if (isset($_POST["Access_Entree_01"]) && $_POST["Access_Entree_01"] != "")
 	<body>
 		<form method="POST" action="simple-page-access-door.php">
 			<h2>Ouverture de portes</h2>
-			<input type="submit" name="Access_Entree_01" class="button" value="Access_Entree_01"/>
-			<input type="submit" name="Unlock_Entree_01" class="button" value="Unlock_Entree_01"/>
-			<input type="submit" name="Lock_Entree_01" class="button" value="Lock_Entree_01"/>
+			<input type="submit" name="Access_Entree_01" class="button" value="Ouvrir la porte quelques secondes"/>
+			<input type="submit" name="Unlock_Entree_01" class="button" value="Deverouiller la porte"/>
+			<input type="submit" name="Lock_Entree_01" class="button" value="Verouiller la porte"/>
 		</form>
 	</body>
 </html>
