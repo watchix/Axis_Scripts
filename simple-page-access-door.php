@@ -1,10 +1,6 @@
 <?php
 if (session_status() == PHP_SESSION_NONE){
 	session_start();
-	$premier_affichage = "yes";
-}
-else
-	$premier_affichage = "no";
 
 $user = "root";
 $password = "xxxxx";
@@ -53,15 +49,14 @@ $data_string_lock_door = "{
 
 
 if (isset($_POST["Unlock_Entree_01"]) && $_POST["Unlock_Entree_01"] != "")
-	$retour = request_api($url,$user,$password,$data_string_access_door);
+	$retour = request_api($url,$user,$password,$data_string_unlock_door);
 
 if (isset($_POST["Lock_Entree_01"]) && $_POST["Lock_Entree_01"] != "")
+	$retour = request_api($url,$user,$password,$data_string_lock_door);
+
+if (isset($_POST["Access_Entree_01"]) && $_POST["Access_Entree_01"] != "")
 	$retour = request_api($url,$user,$password,$data_string_access_door);
 
-if (isset($_POST["Access_Entree_01"]) && $_POST["Access_Entree_01"] != "" OR $premier_affichage == "yes")
-	$retour = request_api($url,$user,$password,$data_string_access_door);
-else
-	$retour = request_api($url,$user,$password,$data_string_access_door);
 ?>
 
 <!DOCTYPE html>
