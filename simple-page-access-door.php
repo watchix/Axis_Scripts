@@ -6,6 +6,7 @@ $user = "root";
 $password = "xxxxx";
 $ip = "my.axis.domain.com";
 $url = "http://$user:$password@$ip/vapix/doorcontrol";
+$axis_token = "Axis-xxxxxxxx:1578502297.927987000";
 
 function request_api($url,$user,$password,$data_string){
 	$headers = array("Content-Type: application/json");
@@ -31,19 +32,19 @@ function request_api($url,$user,$password,$data_string){
 
 $data_string_access_door = "{
 	\"tdc:AccessDoor\":{
-		\"Token\":\"Axis-accc8ee11485:1578502297.927987000\",
+		\"Token\":\"$axis_token\",
 	}
 }";
 
 $data_string_unlock_door = "{
 	\"tdc:UnlockDoor\":{
-		\"Token\":\"Axis-accc8ee11485:1578502297.927987000\",
+		\"Token\":\"$axis_token\",
 	}
 }";
 
 $data_string_lock_door = "{
 	\"tdc:LockDoor\":{
-		\"Token\":\"Axis-accc8ee11485:1578502297.927987000\",
+		\"Token\":\"$axis_token\",
 	}
 }";
 
