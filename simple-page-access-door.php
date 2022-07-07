@@ -51,11 +51,17 @@ $data_string_lock_door = "{
 	}
 }";
 
-if (isset($_POST["Entree_01"]) && $_POST["Entree_01"] != "" OR $premier_affichage == "yes")
+
+if (isset($_POST["Unlock_Entree_01"]) && $_POST["Unlock_Entree_01"] != "")
+	$retour = request_api($url,$user,$password,$data_string_access_door);
+
+if (isset($_POST["Lock_Entree_01"]) && $_POST["Lock_Entree_01"] != "")
+	$retour = request_api($url,$user,$password,$data_string_access_door);
+
+if (isset($_POST["Access_Entree_01"]) && $_POST["Access_Entree_01"] != "" OR $premier_affichage == "yes")
 	$retour = request_api($url,$user,$password,$data_string_access_door);
 else
 	$retour = request_api($url,$user,$password,$data_string_access_door);
-
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +75,9 @@ else
 	<body>
 		<form method="POST" action="OpenDoorEntree.php">
 			<h2>Ouverture de portes</h2>
-			<input type="submit" name="Entree_01" class="button" value="Entree_01"/>
+			<input type="submit" name="Access_Entree_01" class="button" value="Access_Entree_01"/>
+			<input type="submit" name="Unlock_Entree_01" class="button" value="Unlock_Entree_01"/>
+			<input type="submit" name="Lock_Entree_01" class="button" value="Lock_Entree_01"/>
 		</form>
 	</body>
 </html>
