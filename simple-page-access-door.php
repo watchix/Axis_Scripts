@@ -64,7 +64,6 @@ if (isset($_POST["Access_Entree_01"]) && $_POST["Access_Entree_01"] != "")
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8"/>
-		<script src="js/jquery.min.js"/>
 		<link rel="icon" href="favicon.png"/>
 		<link rel="icon" sizes="16x16" href="favicon.png"/>
 	</head>
