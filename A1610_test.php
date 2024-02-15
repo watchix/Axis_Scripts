@@ -1,18 +1,13 @@
 <?php
-if (session_status() == PHP_SESSION_NONE){
-	session_start();
-	$premier_affichage = "yes";
-}
-else
-	$premier_affichage = "no";
 
 $user = "xxxx";
 $password = "xxxxx";
 $ip = "my-domain.com";
 $port = "80";
-$url_door = "http://$user:$password@$ip:$port/vapix/doorcontrol";
-$url_users = "http://$user:$password@$ip:$port/vapix/pacs";
-$url_logs = "http://$user:$password@$ip:$port/vapix/eventlogger";
+
+$url_door = "http://$user:$password@$ip:$port/vapix/doorcontrol";  // URL pour les portes
+$url_users = "http://$user:$password@$ip:$port/vapix/pacs";  // URL pour les utilisateurs
+$url_logs = "http://$user:$password@$ip:$port/vapix/eventlogger";  // URL pour les logs
 
 function request_api($url,$user,$password,$data_string){
 	$headers = array("Content-Type: application/json");
