@@ -1,5 +1,10 @@
 <?php
 
+// Script qui se connecte en HTTPS à des contrôleurs Axis A1001 (sans vérification du certificat)
+// Récupère la liste des crédentials (1000 maximum en raison de la limitation A1001)
+// Compare la date "ValidTo" du credential et le supprime du A1001 si celui-ci est dépassé de 31 jours.
+// Insère les logs dans un fichier .logs
+
 $ctrl_user = "root";
 $ctrl_password = "password";
 $ctrl_ip = "ctrl.axis.com";
