@@ -13,7 +13,7 @@
 $ctrl_user = "root";
 $ctrl_password = "password";
 $ctrl_ip = "ctrls.domain.org";
-$ctrl_ports = [10481, 10482, 10483, 10484, 10485, 10486]; // Liste des ports à tester
+$ctrl_ports = [20080, 20081, 20082]; // Liste des ports à tester
 $dry_run = true; // true = simulate, false = execute deletion
 
 /**
